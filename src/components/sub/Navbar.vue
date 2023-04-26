@@ -52,7 +52,7 @@ ul {
 
     a {
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         font-weight: bold;
     }
 }
