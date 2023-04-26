@@ -96,7 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  height: 830px;
+  height: 890px;
   background-position-y: -90px;
 }
 
