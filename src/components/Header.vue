@@ -1,52 +1,19 @@
 <template>
   <header>
- <Navbar :links="links"/>
+ <Hero />
   </header>
 </template>
 
 <script>
 import Navbar from './sub/Navbar.vue';
+import Hero from './sub/Hero.vue';
   export default {
     name:'Header',
     components: {
       Navbar,
+      Hero,
     },
-    data() {
-      return {
-        links: [{
-          text: 'Homes',
-          url: '#',
-          active: true
-        },
-        {
-          text: 'Pages',
-          url: '#',
-          active: false
-        },
-        {
-          text: 'Blog',
-          url: '#',
-          active: false
-        },
-        {
-          text: 'Shop',
-          url: '#',
-          active: false
-        },
-        {
-          text: 'Events',
-          url: '#',
-          active: false
-        },
-        {
-          text: 'Elements',
-          url: '#',
-          active: false
-        },
-      
-      ]
-      }
-    }
+  
   }
 </script>
 

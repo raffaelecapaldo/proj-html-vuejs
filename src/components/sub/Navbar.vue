@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="nav-container mt-4 d-flex justify-content-between">
+        <div class="nav-container pt-4 d-flex justify-content-between">
             <div class="logo">
                 <img src="/img/logo-img-01.png" alt="logo everlead">
             </div>
@@ -37,6 +37,7 @@ export default {
 .nav-container {
     width: 90%;
     margin: 0 auto;
+
 
     .logo {
         img {
