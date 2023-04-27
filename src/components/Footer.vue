@@ -65,6 +65,9 @@
                 </div>
             </div>
         </div>
+        <div class="bottom">
+            <p class="subtext text-white p-2 fs-6 m-0 text-center">Copyright NonCredoMio</p>
+        </div>
     </footer>
 </template>
 
@@ -153,5 +156,9 @@ input {
         border-bottom:1px solid #fafafa;
         color:white;
         
+    }
+
+    .bottom {
+        background-color: $orange;
     }
 </style>
