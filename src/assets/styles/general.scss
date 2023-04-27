@@ -17,8 +17,10 @@ body {
     color: black;
     text-transform: uppercase;
     font-weight: bold;
+    &:hover {
+      color:$orange;
+    }
 
-    
   }
 
   .black-title {

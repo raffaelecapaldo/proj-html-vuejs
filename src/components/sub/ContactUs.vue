@@ -1,6 +1,6 @@
 <template>
     <div class="contact-us">
-        <div class="container">
+        <div class="container d-flex justify-content-between">
             <div class="map">
                 <img class="img-fluid" src="/img/h1-contact-rev-01.png" alt="map">
                 <div class="pointer l1">
@@ -19,7 +19,14 @@
                     <img src="/img/h1-contact-rev-02.png" alt="pointer">
                 </div>
             </div>
-            <div class="form"></div>
+            <div class="form">
+                <div class="title">
+                    <h2 class="black-title fs-1">Contact Us <span class="orange-dot">.</span></h2>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="orange-line mb-3"></div>
+                </div>
+
+            </div>
         </div>
     </div>
 </template>
@@ -38,8 +45,20 @@
 }
 
 .map {
+
     width: 50%;
     position:relative;
+}
+
+.form {
+    width: 50%;
+    margin-top:-50px;
+
+    .title {
+        .orange-dot {
+            margin-left:-9px;
+        }
+    }
 }
 
 .pointer {
