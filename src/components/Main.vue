@@ -47,6 +47,12 @@
                 <LatestNews :news="news" />
             </div>
             <Testimonials :testimonials="testimonials" />
+            <div class="video position-relative">
+                <img class="img-fluid" src="/img/h1-img-04.jpg" alt="">
+                <div class="play-button d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
         </div>
     </main>
 </template>
@@ -247,6 +253,19 @@ export default {
 .ceo {
     position: relative;
     padding-left: 150px;
+}
+
+.play-button {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    i {
+        color:white;
+        font-size:5rem;
+        cursor:pointer;
+    }
 }
 
 
