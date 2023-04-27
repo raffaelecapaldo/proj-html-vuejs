@@ -13,7 +13,7 @@
                     <h3 class=" fs-5 pb-1 black-title">{{ event.title }}</h3>
                     <p class="subtext fs-6 mb-1"><i class="fa-regular fa-clock me-1"></i> {{ event.dateFull }}</p>
                     <p class="subtext fs-6 mb-2"><i class="fa-sharp fa-regular fa-location-dot fs-5 me-2"></i>{{ event.location }}</p>
-                    <a href="#">Read More</a>
+                    <a class="read-more" href="#">Read More</a>
                 </div>
             </div>
         </div>
@@ -59,12 +59,7 @@
         font-size:1rem;
         color:$orange;
     }
-    a {
-        text-decoration: none;
-        color:black;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
+   
     h3 {
         cursor:pointer;
         &:hover {

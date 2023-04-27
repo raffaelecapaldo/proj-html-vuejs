@@ -76,7 +76,8 @@
     width: 90%;
     position: absolute;
     top:10%;
-    left:85%
+    left:85%;
+
 }
 
 .social {

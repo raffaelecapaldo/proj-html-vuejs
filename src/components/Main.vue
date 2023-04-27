@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="leader">
-                <div class="container d-flex gap-5 justify-content-between">
+                <div class="container position-relative d-flex gap-5 justify-content-between">
                     <div class="info">
                         <h2 class="black-title fs-2">Creative Leader <span class="orange-dot">.</span></h2>
                         <div class="orange-line"></div>
@@ -36,12 +36,18 @@
                             tempor incididunt ut labore et dolore magna aliqua. Ut etim enim ad minim
                             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                             consequat. Duis aute irure dolor in sociis.</p>
-                        <a href="#">Read More</a>
+                        <a class="read-more" href="#">Read More</a>
                     </div>
                     <Percentage :categories="categories"/>
+                    <div class="svg-absolute position-absolute">
+                    <img src="/svg/svg-4.svg" alt="svg-4.svg">
                 </div>
+                </div>
+                
             </div>
-
+            <div class="news">
+                    <LatestNews />
+                </div>
         </div>
     </main>
 </template>
@@ -51,6 +57,7 @@ import SpecialItem from './sub/SpecialItem.vue';
 import CeoSlider from './sub/CeoSlider.vue';
 import Events from './sub/Events.vue';
 import Percentage from './sub/Percentage.vue';
+import LatestNews from './sub/LatestNews.vue';
 export default {
     name: 'Main',
     components: {
@@ -58,6 +65,7 @@ export default {
         CeoSlider,
         Events,
         Percentage,
+        LatestNews,
     },
     data() {
         return {
@@ -169,6 +177,10 @@ export default {
     height: 1100px;
 }
 
+.ceo {
+    overflow: hidden;
+}
+
 .leader {
     background-color: white;
     padding-top: 150px;
@@ -181,10 +193,9 @@ export default {
         margin-left: -6px;
     }
 
-    a {
-        text-decoration: none;
-        color: black;
-        text-transform: uppercase;
-        font-weight: bold;
+    .svg-absolute {
+        top:420px;
+        left:-200px
     }
+
 }</style>
