@@ -1,20 +1,23 @@
 <template>
-    <div class="percentages">
+    <div class="percentages d-flex flex-column gap-4">
+        <div v-for="category in categories" class="component">
         <div class="percentage d-flex justify-content-between">
             <div class="title">
-                <h2 class="black-title fs-4">Mentorship</h2>
+                <h2 class="black-title fs-4">{{ category.title }}</h2>
             </div>
-            <div class="number"><span class="black-title fs-4">30%</span></div>
+            <div class="number"><span class="black-title fs-4">{{ category.percentage }}</span></div>
         </div>
         <div class="line">
-            <div class="lineon"></div>
+            <div :style="{width:category.percentage}" class="lineon"></div>
         </div>
+    </div>
     </div>
 </template>
 
 <script>
     export default {
-        name:'Percentage'
+        name:'Percentage',
+        props:['categories']
     }
 </script>
 
@@ -31,7 +34,6 @@
 }
 
 .lineon {
-    width: 50%;
     background-color: $orange;
     height: 5px;
     top:-3px;

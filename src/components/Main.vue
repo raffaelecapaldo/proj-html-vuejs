@@ -38,7 +38,7 @@
                             consequat. Duis aute irure dolor in sociis.</p>
                         <a href="#">Read More</a>
                     </div>
-                    <Percentage />
+                    <Percentage :categories="categories"/>
                 </div>
             </div>
 
@@ -101,6 +101,22 @@ export default {
                 date: 'Jan, 2022',
                 dateFull: '9:00 am - 5:00 pm, Jan 21, 2022',
                 location: 'Cambridge, MA 02138, USA'
+            },],
+            categories:[{
+                title: 'Mentorship',
+                percentage: '78%'
+            },
+            {
+                title: 'Education',
+                percentage: '95%'
+            },
+            {
+                title: 'Learning',
+                percentage: '65%'
+            },
+            {
+                title: 'Motivation',
+                percentage: '83%'
             },]
         }
     }
