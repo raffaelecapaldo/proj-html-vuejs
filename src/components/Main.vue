@@ -53,6 +53,7 @@
                     <i class="fa-solid fa-play"></i>
                 </div>
             </div>
+            <ContactUs />
         </div>
     </main>
 </template>
@@ -64,6 +65,7 @@ import Events from './sub/Events.vue';
 import Percentage from './sub/Percentage.vue';
 import LatestNews from './sub/LatestNews.vue';
 import Testimonials from './sub/Testimonials.vue';
+import ContactUs from './sub/ContactUs.vue';
 export default {
     name: 'Main',
     components: {
@@ -72,7 +74,8 @@ export default {
         Events,
         Percentage,
         LatestNews,
-        Testimonials
+        Testimonials,
+        ContactUs
     },
     data() {
         return {
