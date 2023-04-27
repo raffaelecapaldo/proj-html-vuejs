@@ -15,12 +15,10 @@
                     </div>
                 </div>
             </div>
-            <div class="ceo container-fluid justify-content-around px-5 d-flex">
+            <div class="ceo container-fluid  d-flex">
 
                 <CeoSlider />
-                <div class="svg-background">
-                    <img src="/svg/svg-4.svg" alt="svg-4.svg">
-                </div>
+                
             </div>
             <div class="events">
                 <div class="container">
@@ -219,4 +217,12 @@ export default {
         left:-200px
     }
 
-}</style>
+   
+
+}
+.ceo {
+    position:relative;
+    padding-left:150px;
+    }
+
+</style>

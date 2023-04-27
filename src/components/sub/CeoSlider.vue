@@ -1,5 +1,8 @@
 <template>
- <div class="ceo-slider">
+ <div class="ceo-slider position-relative">
+    <div class="svg-absolute position-absolute">
+                    <img src="/svg/svg-4.svg" alt="svg-4.svg">
+                </div>
                 <div class="ceo-img">
                     <img :src="'/img/' + images[current]" alt="">
                     <div class="slider-buttons">
@@ -60,7 +63,6 @@
 
 <style lang="scss" scoped>
 .ceo-slider {
-    padding-left:70px;
     padding-bottom:100px;
     img {
         width: 100%
@@ -108,5 +110,15 @@ button {
     padding:10px;
     font-size:2rem;
     color:white;
+}
+
+.ceo-slider {
+    width: fit-content;
+}
+.svg-absolute {
+    left:1100px;
+    top:-100px;
+    height: 300px;
+    width: 60%;
 }
 </style>
