@@ -1,5 +1,5 @@
 <template>
-  <div :class="'bg'+current" class="hero container-fluid position-relative">
+  <div :class="bgClasses[current]" class="hero container-fluid position-relative">
     <Navbar :links="links" />
     <div class="wrapper">
       <div @click="goPrev()" class="arrow-left"><i class="fa-solid fa-arrow-left"></i></div>
@@ -70,21 +70,22 @@ export default {
       },
 
       ],
-      current:3,
+      bgClasses: ['bg1', 'bg2', 'bg3'],
+      current:2,
     }
   },
   methods: {
     goPrev() {
-      if (this.current === 1) {
-        this.current = 3;
+      if (this.current === 0) {
+        this.current = this.bgClasses.length - 1;
       }
       else {
         this.current--;
       }
     },
     goNext() {
-      if (this.current === 3) {
-        this.current = 1;
+      if (this.current === this.bgClasses.length - 1) {
+        this.current = 0;
       }
       else {
         this.current++;
