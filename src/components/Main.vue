@@ -180,7 +180,6 @@ export default {
     top: -70px;
     left: 100px;
     height: 700px;
-    margin-bottom:100px;
     padding-top: 130px;
 
     .top-s {
@@ -206,6 +205,7 @@ export default {
 }
 
 .ceo {
+    padding-top:150px;
 }
 
 .svg-background {
