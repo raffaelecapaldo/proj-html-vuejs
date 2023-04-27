@@ -2,7 +2,10 @@
 <div class="testimonials-bg">
     <button @click="goPrev()" class="left-arrow"><i class="fa-solid fa-arrow-left"></i></button>
         <button @click="goNext()" class="right-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-    <h2 class="black-title text-center">Testimonials.</h2>
+        <div class="title w-100">
+            <h2 class="black-title text-center">Testimonials.</h2>
+        </div>
+    
     <div class="content">
         <div class="testimonial d-flex justify-content-center">
             <div class="info">
@@ -59,7 +62,7 @@
     height: 500px;
     position:relative;
     h2 {
-        font-size:13rem;
+        font-size:12cqw;
     }
     .content {
         background-color: #1e1c1cf5;
@@ -128,5 +131,9 @@ button {
     color:white;
     padding:10px;
     font-size:3rem;
+}
+
+.title {
+    container-type: inline-size;
 }
 </style>
