@@ -11,7 +11,7 @@
                 </div>
                 <div class="bottom-s">
                     <div class="row">
-                        <SpecialItem :cards="cards" />
+                        <SpecialItem :cards="store.cards" />
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="events">
                 <div class="container">
-                    <Events :events="events" />
+                    <Events :events="store.events" />
                 </div>
             </div>
             <div class="leader">
@@ -36,7 +36,7 @@
                             consequat. Duis aute irure dolor in sociis.</p>
                         <a class="read-more" href="#">Read More</a>
                     </div>
-                    <Percentage :categories="categories" />
+                    <Percentage :categories="store.categories" />
                     <div class="svg-absolute position-absolute">
                         <img src="/svg/svg-4.svg" alt="svg-4.svg">
                     </div>
@@ -44,9 +44,9 @@
 
             </div>
             <div class="news">
-                <LatestNews :news="news" />
+                <LatestNews :news="store.news" />
             </div>
-            <Testimonials :testimonials="testimonials" />
+            <Testimonials :testimonials="store.testimonials" />
             <div class="video position-relative">
                 <img class="img-fluid" src="/img/h1-img-04.jpg" alt="">
                 <div class="play-button d-flex justify-content-center align-items-center">
@@ -66,6 +66,7 @@ import Percentage from './sub/Percentage.vue';
 import LatestNews from './sub/LatestNews.vue';
 import Testimonials from './sub/Testimonials.vue';
 import ContactUs from './sub/ContactUs.vue';
+import { store } from '../data/store'
 export default {
     name: 'Main',
     components: {
@@ -79,102 +80,7 @@ export default {
     },
     data() {
         return {
-            cards: [{
-                title: 'Knowing',
-                text: 'Lorem ipsum dolor sit amet, quit consect.',
-                image: 'svg-0.svg'
-            },
-            {
-                title: 'Selling',
-                text: 'Lorem ipsum dolor sit amet, quis consect.',
-                image: 'svg-1.svg'
-            },
-            {
-                title: 'Learning',
-                text: 'Lorem ipsum dolor sit amet, quis consect.',
-                image: 'svg-2.svg'
-            },
-            {
-                title: 'Contact',
-                text: 'Lorem ipsum dolor sit amet, quis consect.',
-                image: 'svg-3.svg'
-            },],
-            events: [{
-                title: 'Melbourne Coaching',
-                day: '07',
-                date: 'Jan, 2022',
-                dateFull: '9:00 am - 5:00 pm, Jan 7,2022',
-                location: 'Cambridge, MA 02138, USA'
-            },
-            {
-                title: 'New York Coaching',
-                day: '11',
-                date: 'Jan, 2022',
-                dateFull: '9:00 am - 5:00 pm, Jan 11, 2022',
-                location: 'Cambridge, MA 02138, USA'
-            },
-            {
-                title: 'London Coaching',
-                day: '21',
-                date: 'Jan, 2022',
-                dateFull: '9:00 am - 5:00 pm, Jan 21, 2022',
-                location: 'Cambridge, MA 02138, USA'
-            },],
-            categories: [{
-                title: 'Mentorship',
-                percentage: '78%'
-            },
-            {
-                title: 'Education',
-                percentage: '95%'
-            },
-            {
-                title: 'Learning',
-                percentage: '65%'
-            },
-            {
-                title: 'Motivation',
-                percentage: '83%'
-            },],
-            news: [{
-                title: 'Next investment',
-                date: 'May 5, 2019',
-                image: 'h1-blog-img-02.jpg',
-                author: 'Amanda Doe',
-                about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
-            },
-            {
-                title: 'Team Building',
-                date: 'May 5, 2019',
-                image: 'h1-blog-img-01.jpg',
-                author: 'Amanda Doe',
-                about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
-            },
-            {
-                title: 'New Business Day',
-                date: 'May 5, 2019',
-                image: 'h1-blog-img-03.jpg',
-                author: 'Amanda Doe',
-                about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
-            },],
-            testimonials: [{
-                id: 0,
-                name: 'Cynthia Clark',
-                bio: '"Corem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
-                image: 'h3-img-04.png'
-            },
-            {
-                id: 1,
-                name: 'Raffaele Capaldo',
-                bio: '"Sono stati giorni infernali, ragazzi miei"',
-                image: 'h3-img-07.png'
-            },
-            {
-                id: 2,
-                name: 'Clelia Fradella',
-                bio: '"Bijou ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
-                image: 'h3-img-08.png'
-            },]
+         store,
         }
     }
 }

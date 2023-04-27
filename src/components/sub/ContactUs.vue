@@ -1,6 +1,6 @@
 <template>
     <div class="contact-us">
-        <div class="container d-flex justify-content-between">
+        <div class="container d-flex gap-2 justify-content-between">
             <div class="map">
                 <img class="img-fluid" src="/img/h1-contact-rev-01.png" alt="map">
                 <div class="pointer l1">
