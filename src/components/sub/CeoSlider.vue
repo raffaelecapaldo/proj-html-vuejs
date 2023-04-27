@@ -1,10 +1,10 @@
 <template>
  <div class="ceo-slider pb-5">
                 <div class="ceo-img">
-                    <img src="/img/h1-img-01.jpg" alt="">
+                    <img :src="'/img/' + images[current]" alt="">
                     <div class="slider-buttons">
-                        <button><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
-                        <button><i class="fa-solid fa-arrow-right"></i></button>
+                        <button @click="goPrev()"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+                        <button @click="goNext()"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
 
                 </div>
@@ -25,7 +25,37 @@
 <script>
     export default {
         name:'CeoSlider',
-    }
+        data() {
+            return {
+                images: [
+                    'h1-img-01.jpg',
+                    'h1-img-02.jpg',
+                    'h1-img-03.jpg'
+                ],
+                current:0
+            }
+        },
+        methods: {
+            goNext() {
+                if (this.current === this.images.length - 1) {
+                    this.current = 0;
+                }
+                else {
+                    this.current++;
+                }
+            },
+            goPrev() {
+                if (this.current === 0) {
+                    this.current = this.images.length - 1;
+                }
+                else {
+                    this.current--;
+                }
+            }
+              
+            }
+        }
+    
 </script>
 
 <style lang="scss" scoped>
