@@ -18,7 +18,7 @@
             <div class="ceo container-fluid">
 
                 <CeoSlider />
-                
+
             </div>
             <div class="events">
                 <div class="container">
@@ -36,17 +36,17 @@
                             consequat. Duis aute irure dolor in sociis.</p>
                         <a class="read-more" href="#">Read More</a>
                     </div>
-                    <Percentage :categories="categories"/>
+                    <Percentage :categories="categories" />
                     <div class="svg-absolute position-absolute">
-                    <img src="/svg/svg-4.svg" alt="svg-4.svg">
+                        <img src="/svg/svg-4.svg" alt="svg-4.svg">
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
             <div class="news">
-                    <LatestNews :news="news" />
-                </div>
-                <Testimonials :testimonials="testimonials" />
+                <LatestNews :news="news" />
+            </div>
+            <Testimonials :testimonials="testimonials" />
         </div>
     </main>
 </template>
@@ -111,7 +111,7 @@ export default {
                 dateFull: '9:00 am - 5:00 pm, Jan 21, 2022',
                 location: 'Cambridge, MA 02138, USA'
             },],
-            categories:[{
+            categories: [{
                 title: 'Mentorship',
                 percentage: '78%'
             },
@@ -149,19 +149,19 @@ export default {
                 about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
             },],
             testimonials: [{
-                id:0,
+                id: 0,
                 name: 'Cynthia Clark',
                 bio: '"Corem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
                 image: 'h3-img-04.png'
             },
             {
-                id:1,
+                id: 1,
                 name: 'Raffaele Capaldo',
                 bio: '"Sono stati giorni infernali, ragazzi miei"',
                 image: 'h3-img-07.png'
             },
             {
-                id:2,
+                id: 2,
                 name: 'Clelia Fradella',
                 bio: '"Bijou ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
                 image: 'h3-img-08.png'
@@ -177,9 +177,10 @@ export default {
     height: fit-content;
     width: 90%;
     margin: 0 auto;
-    position: absolute;
     top: -70px;
     left: 100px;
+    height: 700px;
+    margin-bottom:100px;
     padding-top: 130px;
 
     .top-s {
@@ -205,11 +206,11 @@ export default {
 }
 
 .ceo {
-    padding-top: 800px;
 }
 
 .svg-background {
     margin-top: -90px;
+    z-index: 10000;
 }
 
 .events {
@@ -225,6 +226,7 @@ export default {
     background-color: white;
     padding-top: 150px;
     padding-bottom: 200px;
+
     .info {
         width: 50%;
     }
@@ -234,16 +236,18 @@ export default {
     }
 
     .svg-absolute {
-        top:420px;
-        left:-200px
+        top: 420px;
+        left: -200px
     }
 
-   
+
 
 }
+
 .ceo {
-    position:relative;
-    padding-left:150px;
-    }
+    position: relative;
+    padding-left: 150px;
+}
+
 
 </style>
