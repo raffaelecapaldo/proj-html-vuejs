@@ -14,8 +14,10 @@
                     </div>
                 </div>
             </div>
-            <div class="ceo container-fluid justify-content-end px-5 d-flex">
-                <div>
+            <div class="ceo container-fluid justify-content-around px-5 d-flex">
+                
+            <CeoSlider />
+            <div class="svg-background">
                 <img src="/svg/svg-4.svg" alt="svg-4.svg">
             </div>
             </div>
@@ -25,10 +27,12 @@
 
 <script>
 import SpecialItem from './sub/SpecialItem.vue';
+import CeoSlider from './sub/CeoSlider.vue';
     export default {
         name:'Main',
         components: {
             SpecialItem,
+            CeoSlider
         },
         data() {
             return {
@@ -89,6 +93,10 @@ import SpecialItem from './sub/SpecialItem.vue';
 }
 
 .ceo {
-    padding-top:700px;
+    padding-top:800px;
+}
+
+.svg-background {
+    margin-top:-90px;
 }
 </style>
