@@ -46,7 +46,7 @@
                 
             </div>
             <div class="news">
-                    <LatestNews />
+                    <LatestNews :news="news" />
                 </div>
         </div>
     </main>
@@ -125,6 +125,27 @@ export default {
             {
                 title: 'Motivation',
                 percentage: '83%'
+            },],
+            news: [{
+                title: 'Next investment',
+                date: 'May 5, 2019',
+                image: 'h1-blog-img-02.jpg',
+                author: 'Amanda Doe',
+                about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
+            },
+            {
+                title: 'Team Building',
+                date: 'May 5, 2019',
+                image: 'h1-blog-img-01.jpg',
+                author: 'Amanda Doe',
+                about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
+            },
+            {
+                title: 'New Business Day',
+                date: 'May 5, 2019',
+                image: 'h1-blog-img-03.jpg',
+                author: 'Amanda Doe',
+                about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
             },]
         }
     }
