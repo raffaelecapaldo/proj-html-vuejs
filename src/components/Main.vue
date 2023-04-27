@@ -54,6 +54,7 @@
                 </div>
             </div>
             <ContactUs />
+            <Logos :logos="store.logos" />
         </div>
     </main>
 </template>
@@ -66,6 +67,7 @@ import Percentage from './sub/Percentage.vue';
 import LatestNews from './sub/LatestNews.vue';
 import Testimonials from './sub/Testimonials.vue';
 import ContactUs from './sub/ContactUs.vue';
+import Logos from './sub/Logos.vue';
 import { store } from '../data/store'
 export default {
     name: 'Main',
@@ -76,7 +78,8 @@ export default {
         Percentage,
         LatestNews,
         Testimonials,
-        ContactUs
+        ContactUs,
+        Logos,
     },
     data() {
         return {

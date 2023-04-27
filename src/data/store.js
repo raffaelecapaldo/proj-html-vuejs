@@ -95,6 +95,31 @@ export const store = reactive({
         name: 'Clelia Fradella',
         bio: '"Bijou ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
         image: 'h3-img-08.png'
-    },]
+    },],
+    logos: [{
+        image:'h4-clients-img-03.png',
+        imageHover:'h4-clients-img-04-1.png',
+        hover:false
+    },
+    {
+        image:'h4-clients-img-05.png',
+        imageHover:'h4-clients-img-06-1.png',
+        hover:false
+    },
+    {
+        image:'h4-clients-img-07.png',
+        imageHover:'h4-clients-img-08-1.png',
+        hover:false
+    },
+    {
+        image:'h4-clients-img-09.png',
+        imageHover:'h4-clients-img-10-1.png',
+        hover:false
+    },
+    {
+        image:'h4-clients-img-01.png',
+        imageHover:'h4-clients-img-02.png',
+        hover:false
+    }]
 
 })
