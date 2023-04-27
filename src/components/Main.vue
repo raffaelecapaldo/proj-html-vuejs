@@ -21,6 +21,12 @@
                 <img src="/svg/svg-4.svg" alt="svg-4.svg">
             </div>
             </div>
+            <div class="events">
+                <div class="container">
+                    <Events :events="events" />
+                </div>
+            </div>
+
         </div>
     </main>
 </template>
@@ -28,11 +34,13 @@
 <script>
 import SpecialItem from './sub/SpecialItem.vue';
 import CeoSlider from './sub/CeoSlider.vue';
+import Events from './sub/Events.vue';
     export default {
         name:'Main',
         components: {
             SpecialItem,
-            CeoSlider
+            CeoSlider,
+            Events,
         },
         data() {
             return {
@@ -55,6 +63,27 @@ import CeoSlider from './sub/CeoSlider.vue';
                     title:'Contact',
                     text:'Lorem ipsum dolor sit amet, quis consect.',
                     image:'svg-3.svg'
+                },],
+                events: [{
+                    title: 'Melbourne Coaching',
+                    day: '07',
+                    date: 'Jan, 2022',
+                    dateFull: '9:00 am - 5:00 pm, Jan 7,2022',
+                    location: 'Cambridge, MA 02138, USA'
+                },
+                {
+                    title: 'New York Coaching',
+                    day: '11',
+                    date: 'Jan, 2022',
+                    dateFull: '9:00 am - 5:00 pm, Jan 11, 2022',
+                    location: 'Cambridge, MA 02138, USA'
+                },
+                {
+                    title: 'London Coaching',
+                    day: '21',
+                    date: 'Jan, 2022',
+                    dateFull: '9:00 am - 5:00 pm, Jan 21, 2022',
+                    location: 'Cambridge, MA 02138, USA'
                 },]
             }
         }
@@ -98,5 +127,10 @@ import CeoSlider from './sub/CeoSlider.vue';
 
 .svg-background {
     margin-top:-90px;
+}
+
+.events {
+    background-image: url('/img/h1-img-09.jpg');
+    height: 1100px;
 }
 </style>

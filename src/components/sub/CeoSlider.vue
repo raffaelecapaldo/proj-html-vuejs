@@ -1,5 +1,5 @@
 <template>
- <div class="ceo-slider pb-5">
+ <div class="ceo-slider">
                 <div class="ceo-img">
                     <img :src="'/img/' + images[current]" alt="">
                     <div class="slider-buttons">
@@ -61,6 +61,7 @@
 <style lang="scss" scoped>
 .ceo-slider {
     padding-left:70px;
+    padding-bottom:100px;
     img {
         width: 700px;
 
@@ -83,6 +84,10 @@
         font-size:1.5rem;
         margin-left:5px;
         color:$orange;
+        cursor:pointer;
+        &:hover {
+            color:#1e1e1e;
+        }
     }
 }
 
