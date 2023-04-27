@@ -26,7 +26,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .colmax5 {
         flex: 0 0 auto;
     width: 20%;
