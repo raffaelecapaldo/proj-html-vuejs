@@ -24,6 +24,19 @@
                     <h2 class="black-title fs-1">Contact Us <span class="orange-dot">.</span></h2>
                     <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     <div class="orange-line mb-3"></div>
+                    <div class="form-input">
+                        <input class="textinput me-1" type="text" placeholder="Your name">
+                        <input class="textinput mb-3" type="mail" placeholder="Your email">
+                        <textarea class="p-0 d-block textarea mb-5" rows="5" cols="72" placeholder="Your message..."></textarea>
+                        <a class="me-3 text-uppercase  buttoncta vorange" href="#">
+          <div class=" btn-content d-flex align-items-center">send
+            <div class="delimiter  ms-4 me-3"></div>
+            <div class="arrow ">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+                    </div>
                 </div>
 
             </div>
@@ -91,4 +104,32 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
+
+.textinput {
+    width: 40%;
+    padding:10px;
+    
+}
+
+input, textarea {
+    border-bottom: 1px solid grey;
+    border-top: none;
+    border-left:none;
+    border-right:none;
+}
+
+.buttoncta {
+    padding:10px 40px;
+    color:white;
+    &:hover {
+        color:white;
+    }
+    .delimiter {
+        background-color: white;
+        &:hover {
+            color:white;
+        }
+    }
+}
+
 </style>
