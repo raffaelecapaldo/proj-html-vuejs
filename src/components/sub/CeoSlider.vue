@@ -63,7 +63,7 @@
     padding-left:70px;
     padding-bottom:100px;
     img {
-        width: 700px;
+        width: 100%
 
     }
         position: relative;
@@ -73,7 +73,7 @@
     padding:30px;
     background-color: white;
     height: fit-content;
-    width: 700px;
+    width: 90%;
     position: absolute;
     top:10%;
     left:85%
