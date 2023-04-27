@@ -26,6 +26,7 @@
                     <Events :events="events" />
                 </div>
             </div>
+            <div class="leader"></div>
 
         </div>
     </main>

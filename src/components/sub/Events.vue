@@ -1,5 +1,5 @@
 <template>
-    <div class="events-container pt-5">
+    <div class="events-container">
         <div class="title">
             <h2 class="black-title fs-3">Upcomings Events</h2>
         </div>
@@ -36,7 +36,8 @@
     z-index: 1000;
 }
 .events-container {
-    width: 500px;;
+    width: 500px;
+    padding-top:100px;
 }
 
 .event-info {
@@ -64,6 +65,12 @@
         text-transform: uppercase;
         font-weight: bold;
         padding-top:px;
+    }
+    h3 {
+        cursor:pointer;
+        &:hover {
+            color:$orange;
+        }
     }
 }
 </style>
