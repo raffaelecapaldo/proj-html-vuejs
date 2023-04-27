@@ -4,9 +4,10 @@
             <div class="specialties">
                 <div class="top-s">
                     <h1 class="black-title">Our specialties <span class="orange-dot">.</span></h1>
-      <p class="subtext">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque placeat eaque inventore, quis
-        iusto, quibusdam atque modi.</p>
-        <div class="d-inline-block orange-line"></div>
+                    <p class="subtext">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque placeat eaque
+                        inventore, quis
+                        iusto, quibusdam atque modi.</p>
+                    <div class="d-inline-block orange-line"></div>
                 </div>
                 <div class="bottom-s">
                     <div class="row">
@@ -15,18 +16,31 @@
                 </div>
             </div>
             <div class="ceo container-fluid justify-content-around px-5 d-flex">
-                
-            <CeoSlider />
-            <div class="svg-background">
-                <img src="/svg/svg-4.svg" alt="svg-4.svg">
-            </div>
+
+                <CeoSlider />
+                <div class="svg-background">
+                    <img src="/svg/svg-4.svg" alt="svg-4.svg">
+                </div>
             </div>
             <div class="events">
                 <div class="container">
                     <Events :events="events" />
                 </div>
             </div>
-            <div class="leader"></div>
+            <div class="leader">
+                <div class="container d-flex gap-5 justify-content-between">
+                    <div class="info">
+                        <h2 class="black-title fs-2">Creative Leader <span class="orange-dot">.</span></h2>
+                        <div class="orange-line"></div>
+                        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do nulla eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut etim enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in sociis.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <Percentage />
+                </div>
+            </div>
 
         </div>
     </main>
@@ -36,59 +50,61 @@
 import SpecialItem from './sub/SpecialItem.vue';
 import CeoSlider from './sub/CeoSlider.vue';
 import Events from './sub/Events.vue';
-    export default {
-        name:'Main',
-        components: {
-            SpecialItem,
-            CeoSlider,
-            Events,
-        },
-        data() {
-            return {
-                cards: [{
-                    title:'Knowing',
-                    text:'Lorem ipsum dolor sit amet, quit consect.',
-                    image:'svg-0.svg'
-                },
-                {
-                    title:'Selling',
-                    text:'Lorem ipsum dolor sit amet, quis consect.',
-                    image:'svg-1.svg'
-                },
-                {
-                    title:'Learning',
-                    text:'Lorem ipsum dolor sit amet, quis consect.',
-                    image:'svg-2.svg'
-                },
-                {
-                    title:'Contact',
-                    text:'Lorem ipsum dolor sit amet, quis consect.',
-                    image:'svg-3.svg'
-                },],
-                events: [{
-                    title: 'Melbourne Coaching',
-                    day: '07',
-                    date: 'Jan, 2022',
-                    dateFull: '9:00 am - 5:00 pm, Jan 7,2022',
-                    location: 'Cambridge, MA 02138, USA'
-                },
-                {
-                    title: 'New York Coaching',
-                    day: '11',
-                    date: 'Jan, 2022',
-                    dateFull: '9:00 am - 5:00 pm, Jan 11, 2022',
-                    location: 'Cambridge, MA 02138, USA'
-                },
-                {
-                    title: 'London Coaching',
-                    day: '21',
-                    date: 'Jan, 2022',
-                    dateFull: '9:00 am - 5:00 pm, Jan 21, 2022',
-                    location: 'Cambridge, MA 02138, USA'
-                },]
-            }
+import Percentage from './sub/Percentage.vue';
+export default {
+    name: 'Main',
+    components: {
+        SpecialItem,
+        CeoSlider,
+        Events,
+        Percentage,
+    },
+    data() {
+        return {
+            cards: [{
+                title: 'Knowing',
+                text: 'Lorem ipsum dolor sit amet, quit consect.',
+                image: 'svg-0.svg'
+            },
+            {
+                title: 'Selling',
+                text: 'Lorem ipsum dolor sit amet, quis consect.',
+                image: 'svg-1.svg'
+            },
+            {
+                title: 'Learning',
+                text: 'Lorem ipsum dolor sit amet, quis consect.',
+                image: 'svg-2.svg'
+            },
+            {
+                title: 'Contact',
+                text: 'Lorem ipsum dolor sit amet, quis consect.',
+                image: 'svg-3.svg'
+            },],
+            events: [{
+                title: 'Melbourne Coaching',
+                day: '07',
+                date: 'Jan, 2022',
+                dateFull: '9:00 am - 5:00 pm, Jan 7,2022',
+                location: 'Cambridge, MA 02138, USA'
+            },
+            {
+                title: 'New York Coaching',
+                day: '11',
+                date: 'Jan, 2022',
+                dateFull: '9:00 am - 5:00 pm, Jan 11, 2022',
+                location: 'Cambridge, MA 02138, USA'
+            },
+            {
+                title: 'London Coaching',
+                day: '21',
+                date: 'Jan, 2022',
+                dateFull: '9:00 am - 5:00 pm, Jan 21, 2022',
+                location: 'Cambridge, MA 02138, USA'
+            },]
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -96,42 +112,63 @@ import Events from './sub/Events.vue';
     background-color: white;
     height: fit-content;
     width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
     position: absolute;
-    top:-70px;
-    left:100px;
-    padding-top:130px;
+    top: -70px;
+    left: 100px;
+    padding-top: 130px;
 
     .top-s {
         width: 900px;
         margin: 0 auto;
         text-align: center;
     }
+
     .black-title {
-        font-size:3.5rem;
+        font-size: 3.5rem;
     }
-    .orange-dot{
-        margin-left:-15px;
+
+    .orange-dot {
+        margin-left: -15px;
     }
 }
 
 .bottom-s {
     width: 80%;
-    margin:0 auto;
-    padding-top:50px;
-    padding-bottom:80px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 80px;
 }
 
 .ceo {
-    padding-top:800px;
+    padding-top: 800px;
 }
 
 .svg-background {
-    margin-top:-90px;
+    margin-top: -90px;
 }
 
 .events {
     background-image: url('/img/h1-img-09.jpg');
     height: 1100px;
 }
-</style>
+
+.leader {
+    background-color: white;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    .info {
+        width: 50%;
+    }
+
+    .orange-dot {
+        margin-left: -6px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}</style>

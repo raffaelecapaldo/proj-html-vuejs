@@ -64,7 +64,6 @@
         color:black;
         text-transform: uppercase;
         font-weight: bold;
-        padding-top:px;
     }
     h3 {
         cursor:pointer;
