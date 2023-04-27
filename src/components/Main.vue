@@ -46,7 +46,7 @@
             <div class="news">
                     <LatestNews :news="news" />
                 </div>
-                <Testimonials />
+                <Testimonials :testimonials="testimonials" />
         </div>
     </main>
 </template>
@@ -147,6 +147,24 @@ export default {
                 image: 'h1-blog-img-03.jpg',
                 author: 'Amanda Doe',
                 about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eius mas tellus dolor...'
+            },],
+            testimonials: [{
+                id:0,
+                name: 'Cynthia Clark',
+                bio: '"Corem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
+                image: 'h3-img-04.png'
+            },
+            {
+                id:1,
+                name: 'Raffaele Capaldo',
+                bio: '"Sono stati giorni infernali, ragazzi miei"',
+                image: 'h3-img-07.png'
+            },
+            {
+                id:2,
+                name: 'Clelia Fradella',
+                bio: '"Bijou ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua."',
+                image: 'h3-img-08.png'
             },]
         }
     }

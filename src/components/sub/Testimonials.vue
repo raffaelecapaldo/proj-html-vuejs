@@ -1,17 +1,18 @@
 <template>
 <div class="testimonials-bg">
+    <button @click="goPrev()" class="left-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+        <button @click="goNext()" class="right-arrow"><i class="fa-solid fa-arrow-right"></i></button>
     <h2 class="black-title text-center">Testimonials.</h2>
     <div class="content">
         <div class="testimonial d-flex justify-content-center">
             <div class="info">
-            <img src="/img/h3-img-04.png" alt="">
-            <h6>Cyncya Clark</h6>
-            <p class="subtext">"Corem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod
-tempor incididunt ut labore et dolore magna aliqua."</p>
+            <img :src="'/img/' + testimonials[current].image" :alt="testimonials[current].name">
+            <h6>{{ testimonials[current].name }}</h6>
+            <p class="subtext">{{ testimonials[current].bio }}</p>
 <div class="slider-position d-flex justify-content-center align-items-center">
     <span>01</span>
     <div class="lines d-flex">
-        <div :class="{active: n === 1}" class="line" v-for="n in 3"></div>
+        <div :class="{active: current === testimonial.id}" class="line" v-for="testimonial in testimonials"></div>
     </div>
     <span>03</span>
 </div>
@@ -25,6 +26,30 @@ tempor incididunt ut labore et dolore magna aliqua."</p>
 <script>
     export default {
         name:'Testimonials',
+        props:['testimonials'],
+        data() {
+            return {
+                current:0,
+            }
+        },
+        methods: {
+            goNext() {
+                if (this.current === this.testimonials.length - 1) {
+                    this.current = 0;
+                }
+                else {
+                    this.current++;
+                }
+            },
+            goPrev() {
+                if (this.current === 0) {
+                    this.current = this.testimonials.length - 1
+                }
+                else {
+                    this.current--;
+                }
+            }
+        }
     }
 </script>
 
@@ -82,5 +107,26 @@ tempor incididunt ut labore et dolore magna aliqua."</p>
 
 .active {
     background-color: #fafafa !important;
+}
+
+.left-arrow, .right-arrow {
+    position:absolute;
+    z-index:1000;
+    top:250px;
+}
+
+.left-arrow {
+    left:190px
+}
+.right-arrow {
+    right:190px;
+}
+
+button {
+    background-color: transparent;
+    border:none;
+    color:white;
+    padding:10px;
+    font-size:3rem;
 }
 </style>
