@@ -113,7 +113,7 @@ button {
 }
 
 .ceo-slider {
-    width: fit-content;
+    width: 50%
 }
 .svg-absolute {
     left:1100px;

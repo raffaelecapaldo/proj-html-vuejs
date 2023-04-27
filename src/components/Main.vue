@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ceo container-fluid  d-flex">
+            <div class="ceo container-fluid">
 
                 <CeoSlider />
                 
@@ -46,6 +46,7 @@
             <div class="news">
                     <LatestNews :news="news" />
                 </div>
+                <Testimonials />
         </div>
     </main>
 </template>
@@ -56,6 +57,7 @@ import CeoSlider from './sub/CeoSlider.vue';
 import Events from './sub/Events.vue';
 import Percentage from './sub/Percentage.vue';
 import LatestNews from './sub/LatestNews.vue';
+import Testimonials from './sub/Testimonials.vue';
 export default {
     name: 'Main',
     components: {
@@ -64,6 +66,7 @@ export default {
         Events,
         Percentage,
         LatestNews,
+        Testimonials
     },
     data() {
         return {
