@@ -136,6 +136,7 @@ button {
 
     .ceo-slider {
         width: 100%;
+        transition:0.3s;
     }
 
     .ceo {
