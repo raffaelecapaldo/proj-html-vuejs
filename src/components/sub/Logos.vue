@@ -1,8 +1,8 @@
 <template>
     <div class="logos pt-4">
         <div class="container">
-            <div class="row">
-                <div v-for="logo in logos" class="colmax5">
+            <div class="d-flex logo flex-column flex-lg-row gap-3 gap-lg-0 align-items-center justify-content-between">
+                <div v-for="logo in logos" >
                     <img  @mouseover="logo.hover = true" @mouseleave="logo.hover = false" :src="logo.hover ? '/img/' + logo.imageHover : '/img/' + logo.image" alt="">
                 </div>
             </div>
@@ -31,5 +31,16 @@
         flex: 0 0 auto;
     width: 20%;
     }
+
+
+}
+
+@media (max-width: 992px) {
+    .logo {
+        margin-top:360px;
+      
+    }
+
+ 
 }
 </style>

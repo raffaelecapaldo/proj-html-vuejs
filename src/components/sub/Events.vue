@@ -67,4 +67,10 @@
         }
     }
 }
+
+@media screen and (max-width:992px) {
+    .events-container {
+        width: 100%;
+    }
+}
 </style>

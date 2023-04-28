@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="leader">
-                <div class="container position-relative d-flex gap-5 justify-content-between">
+                <div class="container position-relative d-flex flex-column flex-lg-row align-items-center gap-5 gap-lg-5 justify-content-between">
                     <div class="info">
                         <h2 class="black-title fs-2">Creative Leader <span class="orange-dot">.</span></h2>
                         <div class="orange-line"></div>
@@ -180,5 +180,19 @@ export default {
     }
 }
 
+@media screen and (max-width:992px) {
+    .specialties {
+        height: 1600px;
+        .top-s {
+            width: 100%;
+        }
+    }
+
+    .ceo {
+        padding-left:50px;
+    }
+
+    
+}
 
 </style>

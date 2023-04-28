@@ -37,6 +37,7 @@ export default {
 .nav-container {
     width: 90%;
     margin: 0 auto;
+    overflow: hidden;
 
 
     .logo {

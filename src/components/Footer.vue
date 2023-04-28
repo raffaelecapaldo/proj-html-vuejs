@@ -2,8 +2,8 @@
     <footer>
         <div class="top">
             <div class="container">
-                <div class="row">
-                    <div class="col-3 pb-5">
+                <div class="row ">
+                    <div class="col-12 col-lg-3 pb-5">
                         <h2 class="title mb-3">About</h2>
                         <div class="orange-line mb-3"></div>
                         <p class="subtext">We created Everlead to effectively become the
@@ -14,7 +14,7 @@
                             <i class="fa-brands fa-square-twitter"></i>
                         </div>
                     </div>
-                    <div class="col-3 pb-5">
+                    <div class="col-12 col-lg-3 pb-5">
                         <h2 class="title mb-3">Twitter</h2>
                         <div class="orange-line mb-3"></div>
                         <div class="tweet d-flex ">
@@ -29,7 +29,7 @@
                         </div>
 
                     </div>
-                    <div class="col-3 pb-5">
+                    <div class="col-12 col-lg-3 pb-5">
                         <h2 class="title mb-3">Important links</h2>
                         <div class="orange-line mb-3"></div>
                         <ul>
@@ -50,7 +50,7 @@
                             </a>
                         </ul>
                     </div>
-                    <div class="col-3 pb-5 contacts">
+                    <div class="col-12 col-lg-3 pb-5 contacts">
                         <h2 class="title mb-3">Contact me</h2>
                         <div class="orange-line mb-3"></div>
                         <p class="subtext m-1"><i class="fa-regular fa-location-dot"></i>457 BigBlue street, 10013</p>

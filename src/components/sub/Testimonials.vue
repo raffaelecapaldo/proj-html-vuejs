@@ -136,4 +136,10 @@ button {
 .title {
     container-type: inline-size;
 }
+
+@media screen and (max-width:992px) {
+    .left-arrow, .right-arrow {
+        top:50px;
+    }
+}
 </style>

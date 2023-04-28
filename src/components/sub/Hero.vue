@@ -101,6 +101,10 @@ export default {
   background-position-y: -90px;
 }
 
+.bg1, .bg2, .bg3 {
+  background-position: center;
+}
+
 .bg1 {
   background-image: url('/img/h1-rev-img-01.jpg');
 }
@@ -136,5 +140,15 @@ export default {
     right:60px;
   }
 
+}
+
+@media screen and (max-width:992px)  {
+  .wrapper {
+    width: 100%;
+    margin-left:0;
+    .arrow-left, .arrow-right {
+      top:200px;
+    }
+  }
 }
 </style>

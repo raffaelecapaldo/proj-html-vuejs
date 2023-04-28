@@ -1,6 +1,6 @@
 <template>
     <div class="contact-us">
-        <div class="container d-flex gap-2 justify-content-between">
+        <div class="container d-block d-lg-flex gap-2 justify-content-between">
             <div class="map">
                 <img class="img-fluid" src="/img/h1-contact-rev-01.png" alt="map">
                 <div class="pointer l1">
@@ -27,7 +27,7 @@
                     <div class="form-input">
                         <input class="textinput me-1" type="text" placeholder="Your name">
                         <input class="textinput mb-3" type="mail" placeholder="Your email">
-                        <textarea class="p-0 d-block textarea mb-5" rows="5" cols="72" placeholder="Your message..."></textarea>
+                        <textarea class="p-0 d-block textarea  mb-lg-5" rows="5" cols="72" placeholder="Your message..."></textarea>
                         <a class="me-3 text-uppercase  buttoncta vorange" href="#">
           <div class=" btn-content d-flex align-items-center">send
             <div class="delimiter  ms-4 me-3"></div>
@@ -129,6 +129,23 @@ input, textarea {
         &:hover {
             color:white;
         }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .map {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin-top:50px;
+
+        .textarea{
+            padding:0;
+            width: 100%;
+        }
+        
     }
 }
 

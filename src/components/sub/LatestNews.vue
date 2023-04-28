@@ -7,7 +7,7 @@
     <div class="bottom">
         <div class="container">
             <div class="row">
-                <div class="col-4 pe-3" v-for="item in news">
+                <div class="col-12 col-lg-4 pe-3" v-for="item in news">
                     <div class="news-image position-relative">
                         <div class="tag"><i class="fa-solid fa-tag me-2"></i>Business, Leading</div>
                         <img class="img-fluid" :src="'/img/' + item.image" :alt="item.title">
