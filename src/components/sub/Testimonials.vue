@@ -8,14 +8,14 @@
     
     <div class="content">
         <div class="testimonial d-flex justify-content-center">
-            <div class="info">
-            <img :src="'/img/' + testimonials[current].image" :alt="testimonials[current].name">
-            <h6>{{ testimonials[current].name }}</h6>
-            <p class="subtext">{{ testimonials[current].bio }}</p>
+            <div :class="index === current && position === 'prev' ? 'showprev' : index === current && position === 'next' ? 'show' : 'notshow'" v-for="(testimonial,index) in testimonials" class="info">
+            <img :src="'/img/' + testimonial.image" :alt="testimonial.name">
+            <h6>{{ testimonial.name }}</h6>
+            <p class="subtext">{{ testimonial.bio }}</p>
 <div class="slider-position d-flex justify-content-center align-items-center">
     <span>01</span>
     <div class="lines d-flex">
-        <div @click="current = testimonial.id" :class="{active: current === testimonial.id}" class="line" v-for="testimonial in testimonials"></div>
+        <div @click="chooseTestimonial(testimonial.id)" :class="{active: current === testimonial.id}" class="line" v-for="testimonial in testimonials"></div>
     </div>
     <span>03</span>
 </div>
@@ -33,6 +33,7 @@
         data() {
             return {
                 current:0,
+                position:'prev'
             }
         },
         methods: {
@@ -43,6 +44,7 @@
                 else {
                     this.current++;
                 }
+                this.position = 'next';
             },
             goPrev() {
                 if (this.current === 0) {
@@ -51,6 +53,17 @@
                 else {
                     this.current--;
                 }
+                this.position = 'prev';
+            },
+            chooseTestimonial(id) {
+                if (id < this.current ) { //controlla se viene prima o dopo e assegna la posizione relativa
+                    this.position = 'prev';
+                }
+                else {
+                    this.position = 'next';
+                }
+                this.current = id;
+
             }
         }
     }
@@ -79,6 +92,7 @@
     text-align: center;
     width: 40%;
     margin:0 auto;
+    overflow: hidden;
     img {
         padding:4px;
         background-color: white;
@@ -117,6 +131,47 @@
 .active {
     border-color: #fafafa !important;
 }
+
+
+.notshow {
+    display:none;
+}
+
+.show {
+    animation: shownext 0.3s;
+}
+
+.showprev {
+    animation: showprev 0.3s;
+}
+@keyframes shownext {
+0% {
+        display: block
+    }
+
+    1% {
+        translate: -664px 0;
+    }
+
+    100% {
+        translate: 0px 0;
+    }
+}
+
+@keyframes showprev {
+0% {
+        display: block
+    }
+
+    1% {
+        translate: 664px 0;
+    }
+
+    100% {
+        translate: 0px 0;
+    }
+}
+
 
 .left-arrow, .right-arrow {
     position:absolute;
