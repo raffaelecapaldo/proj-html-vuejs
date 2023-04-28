@@ -155,7 +155,7 @@ export default {
     margin-left:0;
     padding-top:3rem;
     .arrow-left, .arrow-right {
-      top:500px;
+      top:50px;
     }
   }
 }
