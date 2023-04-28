@@ -41,32 +41,38 @@ export default {
       links: [{
         text: 'Homes',
         url: '#',
-        active: true
+        active: true,
+        current:true,
       },
       {
         text: 'Pages',
         url: '#',
-        active: false
+        active: false,
+        current:false,
       },
       {
         text: 'Blog',
         url: '#',
-        active: false
+        active: false,
+        current:false
       },
       {
         text: 'Shop',
         url: '#',
-        active: false
+        active: false,
+        current:false,
       },
       {
         text: 'Events',
         url: '#',
-        active: false
+        active: false,
+        current:false,
       },
       {
         text: 'Elements',
         url: '#',
-        active: false
+        active: false,
+        current:false,
       },
 
       ],

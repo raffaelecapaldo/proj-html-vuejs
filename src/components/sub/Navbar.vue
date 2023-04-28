@@ -6,8 +6,8 @@
             </div>
             <div class="navlinks">
                 <ul class="d-flex gap-5 text-uppercase">
-                    <a v-for="link in links" :href="link.url">
-                        <li :class="{ active: link.active, notactive: !link.active }"> {{ link.text }}</li>
+                    <a @mouseover="link.active = true" @mouseleave="link.active = false" v-for="link in links" :href="link.url">
+                        <li :class="{ active: link.active || link.current , notactive: !link.active }"> {{ link.text }}</li>
                     </a>
 
                     <a class="notactive" href="#">

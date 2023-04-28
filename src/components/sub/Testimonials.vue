@@ -141,5 +141,9 @@ button {
     .left-arrow, .right-arrow {
         top:50px;
     }
+
+    .testimonials-bg {
+        height: 700px;
+    }
 }
 </style>
