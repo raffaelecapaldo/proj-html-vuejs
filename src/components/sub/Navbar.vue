@@ -130,4 +130,8 @@ ul {
     margin-right: 10px;
 
 }
+
+li {
+    transition:0.3s;
+}
 </style>

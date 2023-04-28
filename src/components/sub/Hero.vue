@@ -105,6 +105,7 @@ export default {
 .hero {
   height: 890px;
   background-position-y: -90px;
+  transition:0.3s;
 }
 
 .bg1, .bg2, .bg3 {
