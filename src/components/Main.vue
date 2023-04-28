@@ -189,9 +189,12 @@ export default {
     }
 
     .ceo {
-        padding-left:50px;
+        padding-left:15px;
     }
-
+    .ceo-info {
+        padding:0;
+        width: 100%;
+    }
     
 }
 
