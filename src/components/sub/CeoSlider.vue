@@ -3,8 +3,12 @@
         <div class="svg-absolute position-absolute">
             <img src="/svg/svg-4.svg" alt="svg-4.svg">
         </div>
-        <div class="ceo-img">
-            <img :src="'/img/' + images[current]" alt="">
+        <div class="ceo-img position-relative">
+            <img :class="index === current && position === 'prev' ? 'activeprev' : index === current && position === 'next' ? 'active' : 'notactive'"
+                v-for="(image, index) in images" :src="'/img/' + image" alt="">
+                <div class="backimage">
+                    <img :src="position === 'prev' ? '/img/' + images[current + 1 ] : '/img/' + images[current - 1]" alt="">
+                </div>
             <div class="slider-buttons">
                 <button @click="goPrev()"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
                 <button @click="goNext()"><i class="fa-solid fa-arrow-right"></i></button>
@@ -37,7 +41,8 @@ export default {
                 'h1-img-02.jpg',
                 'h1-img-03.jpg'
             ],
-            current: 0
+            current: 0,
+            position: 'prev',
         }
     },
     methods: {
@@ -48,6 +53,7 @@ export default {
             else {
                 this.current++;
             }
+            this.position = 'next'
         },
         goPrev() {
             if (this.current === 0) {
@@ -56,6 +62,7 @@ export default {
             else {
                 this.current--;
             }
+            this.position = 'prev'
         }
 
     }
@@ -68,10 +75,12 @@ export default {
     padding-bottom: 100px;
 
     img {
-        width: 100%
+        transition: 0.3s;
+    
     }
 
     position: relative;
+    z-index:99999;
 }
 
 .ceo-info {
@@ -83,6 +92,15 @@ export default {
     top: 10%;
     left: 85%;
 
+}
+
+.backimage {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: -1;
 }
 
 .social {
@@ -102,10 +120,12 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0px;
+    z-index: 999999;
 }
 
 .ceo-img {
     position: relative;
+    overflow: hidden;
 }
 
 button {
@@ -127,6 +147,53 @@ button {
     width: 60%;
 }
 
+.notactive {
+    opacity: 0;
+    display: none;
+}
+
+.active {
+    animation: shownext 0.3s ease-in;
+}
+
+.activeprev {
+    animation: prevshow 0.3s ease-in;
+}
+/* se clicchi a destra la card arriva da sinistra */
+@keyframes shownext {
+    0% {
+        display: inline-block
+    }
+
+    1% {
+        translate: -704px 0;
+    }
+
+    100% {
+        height: 100%;
+        translate: 0px 0;
+    }
+
+
+
+
+}
+/* se clicchi a sinistra la card arriva da destra */
+@keyframes prevshow {
+    0% {
+        display: inline-block
+    }
+
+    1% {
+        translate: 704px 0;
+    }
+
+    100% {
+        height: 100%;
+        translate: 0px 0;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .ceo-info {
         position: static;
@@ -136,7 +203,7 @@ button {
 
     .ceo-slider {
         width: 100%;
-        transition:0.3s;
+        transition: 0.3s;
     }
 
     .ceo {
