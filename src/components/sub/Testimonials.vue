@@ -15,7 +15,7 @@
 <div class="slider-position d-flex justify-content-center align-items-center">
     <span>01</span>
     <div class="lines d-flex">
-        <div :class="{active: current === testimonial.id}" class="line" v-for="testimonial in testimonials"></div>
+        <div @click="current = testimonial.id" :class="{active: current === testimonial.id}" class="line" v-for="testimonial in testimonials"></div>
     </div>
     <span>03</span>
 </div>
@@ -103,13 +103,19 @@
     margin-right:10px;
     .line {
         width: calc(100% / 3);
-        height: 1px;
-        background-color: rgba(255,255,255,.2)
+        height: 15px;
+        border-bottom:1px solid rgba(255,255,255,.2);
+        transition:0.3s;
+        background-color: transparent;
+        cursor:pointer;
+        &:hover {
+            border-color: #fafafa;
+        }
     }
 }
 
 .active {
-    background-color: #fafafa !important;
+    border-color: #fafafa !important;
 }
 
 .left-arrow, .right-arrow {
