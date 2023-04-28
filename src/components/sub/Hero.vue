@@ -137,6 +137,7 @@ export default {
     top:400px;
     font-size:2rem;
     padding:10px;
+    z-index: 1;
     cursor:pointer;
   }
   .arrow-left{
@@ -152,8 +153,9 @@ export default {
   .wrapper {
     width: 100%;
     margin-left:0;
+    padding-top:3rem;
     .arrow-left, .arrow-right {
-      top:200px;
+      top:500px;
     }
   }
 }

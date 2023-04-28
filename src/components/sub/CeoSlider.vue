@@ -129,7 +129,9 @@ button {
 
 @media screen and (max-width: 992px) {
     .ceo-info {
-        position:static;
+        position: static;
+        padding: 0;
+        width: 100%;
     }
 
     .ceo-slider {
@@ -141,5 +143,4 @@ button {
         justify-content: center;
     }
 }
-
 </style>
